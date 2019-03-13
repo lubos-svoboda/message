@@ -1,6 +1,6 @@
 # README
 
-### Body k dokončení, diskusy
+### Body k dokončení/diskusi
 
 * Testy na všechny enpointy a negativní scénáře
 * Servisní vrstva, transactional manager
