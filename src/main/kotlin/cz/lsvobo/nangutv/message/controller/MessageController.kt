@@ -59,11 +59,11 @@ class MessageController {
     @DeleteMapping("/{id}")
     fun deleteById(@PathVariable id: Long): ResponseEntity<Void> {
         val message = messageRepository.findById(id)
-        if (message.isPresent) {
+        return if (message.isPresent) {
             messageRepository.delete(message.get())
-            return ResponseEntity.noContent().build()
+            ResponseEntity.noContent().build()
         } else {
-            return ResponseEntity.notFound().build()
+            ResponseEntity.notFound().build()
         }
     }
 }
